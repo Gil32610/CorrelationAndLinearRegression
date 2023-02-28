@@ -6,8 +6,8 @@ public class LinearRegression {
         System.out.println("-".repeat(10)+"\n");
         double a = calculateA(table);
         double b = calculateB(a, table);
-        System.out.printf("The result equation is Y = %.2fX + %.2f",a,b);
-
+        System.out.printf("The result equation is Y = %.2fX + (%.2f)",a,b);
+        System.out.println("-".repeat(10)+"\n");
 
     }
     public static void print2DArray(double [][] table){
