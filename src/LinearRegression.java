@@ -7,16 +7,24 @@ public class LinearRegression {
 
         double[][] table = { { 5, 6 }, { 8, 9 }, { 7, 8 }, { 10, 10 }, { 6, 5 }, { 7, 7 }, { 9, 8 }, { 3, 4 }, { 8, 6 },
                 { 2, 2 } };
+
+        for (int i = 0; i < table.length; i++) {
+            for (int j = 0; j < table[0].length - 1; j++) {
+                System.out.println("Value of X: ");
+
+            }
+        }
         print2DArray(table);
         separate();
         double r = linearCorrelationCoefficient(table);
-        double r2 =r*r;
+        double r2 = r * r;
         double a = calculateA(table);
         double b = calculateB(a, table);
         System.out.printf("The result equation is Y = %.2fX + (%.2f)%n", a, b);
         separate();
         System.out.printf("The Linear Correlation Coefficient is %.2f%%%n", (r * 100));
-        System.out.printf("The relationship between the two variables explain %.2f%% of the variation in the data",(r2*100));
+        System.out.printf("The relationship between the two variables explain %.2f%% of the variation in the data",
+                (r2 * 100));
 
     }
 
@@ -80,7 +88,13 @@ public class LinearRegression {
                 * ((values.length * ySquared) - (sumY * sumY));
         return (values.length * xTimesY - (sumX * sumY)) / (Math.sqrt(denominator));
     }
-    public static void separate(){
+
+    public static void separate() {
         System.out.println("--------\n".repeat(4));
     }
+
+        // public static Double[][] createEmpty2DArray(int row, int column) {
+        //     Double[][] empty = new Double[row][column];
+
+        // }
 }
